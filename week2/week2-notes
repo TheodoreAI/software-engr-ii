@@ -1,0 +1,119 @@
+What is the Software Development Process?
+
+
+
+Requirements: 
+
+During this phase, a development team must determine what the proposed piece of software must do. To do this, the team will often conduct interviews with stakeholders to determine what each of them expects/needs from the software. Developers will also craft user stories and use cases to help conceptualize how the software will be used and how it needs to function. In the end, the team will have a list of functional requirements (what the software will do) and non-functional requirements (how the software needs to perform).
+
+
+Design: 
+
+Once the requirements have been solidified, the team can move onto planning how to bring them to life in a piece of software. This is where software developers will layout the architecture of the program. For example, the team will take the requirements and determine the components that will be needed such as a database or RESTful API. Later in the design phase, developers will even map out the classes they will need and what each must do. The end result is a lengthy design document that will be referenced during the actual coding of the project.
+
+Implementation:
+
+This is the phase most people associate with software development; it is where most of the coding happens. Armed with the design document, the developers are able to craft a solution to hopefully meet the requirements laid out at the beginning of the software development process. While it may seem this is the most important part of the process, it just a piece that couldn't exist without quality time invested before any developer opens a text editor.
+
+Verification:
+
+The primary focus of this phase is to ensure that the actual implementation meets the requirements set forth at the beginning. This phase is most often associated with finding mistakes that were introduced while turning the design into code. During verification, it may be discovered that the implementation successfully realizes the design, but not the requirements. This would indicate that the design is flawed in some way.
+
+Maintenance: 
+
+This phase generally occurs after the software is released. The objective is to fix any bugs that are discovered and to add features that the client/users are requesting. This is also where any non-functional requirement issues can be addressed, such as increasing execution speed or UI redesigns.
+
+The main objective of Software Engineering II is testing, testing falls into the verification stage, it does not happen after all the other stages are completed. 
+
+
+
+software testing: 
+
+	- trying to generate a fail state in the software with the ultimate goal of being unsuccessful in doing so. 
+
+
+Failure: a deviation from the expected behavior (bugs)
+Fault: an instance of incorrect code that can lead to a failure 
+Error: a mistake that introduces a fault (typo and conceptual misunderstanding)
+
+
+Why testing is important?
+
+	self-centered reasons: 
+	- Saves time in the long run
+	- Fewer bug fixes after a new release
+	- Makes you look like a wizard; avoid time sinks; increased productivity
+
+	coworkers and employer reasons:
+	- Saves time for individual developers and therefore money to the company (meh)
+	- Protects from teammate mistakes; testing prevents new errors from being introduced into the codebase
+	- Happy customers; reduce consumer confidence and repeat business and result in lost revenue. 
+	
+	User reasons:
+	- Security: many users put a great deal of trust in sharing personal info with software companies, testing can help identify security risks
+	- Quality of life: quite a few pieces of software have replaced users' more traditional way of doing things, such as banking, making doc appts, paying bills.
+	- Life and Death: there are numerous examples where software bugs have resulted in the death of individuals; Boeing 737 Max crashes; Therac-25
+
+
+Types of Testing
+
+	1. Functional Testing: tests that verify that the software meets the requirement specifications when it comes to functionality; does the software do the things it its expected to do?
+
+	- ex: does clicking "save" actually save the changes tot he hard drive?
+	
+
+	2. Non-functional Testing: tests are used to verify that the software performs at the required levels. This can literally mean performance, but also usability, reliability, and robustness. 
+	- ex: does the webpage load time < 2 secs; support active users >= 10k at a time. 
+
+	
+
+
+Ways of Testing
+
+	1. types of functional testing:
+		- unit testing
+		- integration testing
+		- regression testing
+
+	2. types of non-functional testing:
+		- performance testing
+		- Scalability testing
+		- usability testing
+
+Testing approaches
+
+	1. Manual testing:
+		- pros: [it is intuitive, no upfront cost]
+		- cons: [time consuming, human error, not easily repeatable]
+
+	2. Automated testing:
+		- pros: [easy to repeat, fewer mistakes, very efficient]
+		- cons: [High upfront cost, not suited for everything (UI needs human eye), Test maintenance]
+
+
+
+UNIT TESTING
+
+
+	- when the smallest component of a software system is verified to produce the expected behavior. 
+
+
+Testing Frameworks:
+
+	To run automated testing we need a testing Framework.
+	
+	Frameworks provide the following:
+		- Test fixture; a way to set up the elements required for a test and then roll back the setup when the test is complete
+		- Test case; a way to test a particular unit of the software with a specific input for a given response
+		- Test suite; a collection of test cases
+		- Test runner; a way to execute the tests and report the results
+	
+	unittest 
+		- python testing framework inspired by JUnit from Java. 
+		- learning unittest will ideally prepare me to quickly expand what I larened here to other projects I may be working on. 
+		
+		
+
+
+
+
