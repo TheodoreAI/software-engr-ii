@@ -1,2 +1,2 @@
-def credit_card_validator():
+def credit_card_validator(card_num):
     pass
