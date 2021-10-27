@@ -1,10 +1,10 @@
-# Software Engineering coursework
 
-## By Mateo Estrada Jorge
+# How to test code
+## By: Mateo Estrada Jorge
+## Software Engineering II 
+## Oregon State University
 
-## Student of Oregon State University
-
-### If you would like to use any of my code please reference myself or OSU accordingly. 
+#### You are welcome to use any or all the code you would like, but please reference myself or OSU accordingly.
 
 
 
