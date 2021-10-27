@@ -1,0 +1,84 @@
+Random testing
+
+
+	definition: belongs to the black box testing family and helps with the input domain.
+
+	input domain: the pool of all possible inputs that a unit/program can take.
+
+
+	Advantages
+		1. Quick to write
+		2. Can cover large portions of the input domain with very little code
+		3. Tests have no bias
+		4. Can potentially generate an input that no one considered
+	Disadvantages
+		5. Many random inputs could fall under the same "test case", so become redundant and a waste of resources
+		6. May not test the tricky parts of the input domain like edge cases
+		7. Without any targeting, random inputs could easily miss glaring errors
+		8. Randomly selecting inputs for each test run could see some runs pass while others fail
+		9. Any logic used in the random testing needs to be tested
+
+
+
+
+	Let's look at each of these in more detail - 
+
+	Advantages
+		1. Quick to write: Instead of crafting unique test cases a tester can simply generate random inputs and use a single test case.
+		2. Can cover large portions of the input domain with very little code: In this way a single test can be run hundreds, even thousands, of times and cover a larger portion of the input domain.
+		3. Tests have no bias: Oftentimes, testers will overlook testing a specific portion of the code because they believe it works as intended.
+		4. Can potentially generate an input that no one considered: This can be related to bias, or it could simply be that the tester completely misses some important test cases.
+Disadvantages
+		5. Many random inputs could fall under the same "test case", so become redundant and a waste of resources: As we saw when discussion partition testing, there exist many subdomains, but we don't need to test each subdomain hundreds of times (usually)
+		6. May not test the tricky parts of the input domain like edge cases: From our discussion about boundary testing you know that mistakes often happen at the edges of the input domain. Random testing generally will test the middle of the input domain at the same frequency as the edges.
+		7. Without any targeting, random inputs could easily miss glaring errors: As a tester with experience, you can use error guessing to identify likely troublesome test cases, but random testing could easily never generate those important test cases.
+		8. Randomly selecting inputs for each test run could see some runs pass while others fail: Many uses of unit testing, such as regression testing and continuous integration rely on having repeatable tests as proof that things haven't been broken. Truly random tests could produce false positives that would lead to an incorrect evaluation that everything is OK.
+		9. Any logic used in the random testing needs to be tested: The worst scenario for any tester is when the written tests do not test the things the tester thinks they are testing. This often happens when a test is created using algorithms that have not been tested themselves. This is often why most Random Testing doesn't test with an "expected" value, instead just throws random test cases at the software under test.
+
+
+	Often, we will often not identify the expected output for the randomly generated inputs.
+
+
+	
+	The Moving Parts; 
+
+
+		what we need:
+
+			1. Random test case generator
+				i. This is where we generate random inputs based on our knowledge of the input domain. For example, if our software is supposed to verify credit card numbers, then we know the inputs need to be 16 digit numbers.
+			2. Software to test (aka software under test)
+				ii. This is what we send our randomly generated inputs through. The software will run its code on these inputs and generate output. For random testing to be useful, it is often important that the software under test have some error reporting capabilities that allow the testers to see which random inputs triggered the errors in the code.
+			3. Something to monitor for errors (aka an oracle)
+
+				iii. The oracle's sole job is to watch for error states in the software and save the random inputs that generated those states for later inspection. An oracle can be as simple as displaying error generating input to the screen or it could be an elaborate piece of software that generates formal bug reports.
+
+
+
+		Unguided Vs. Guided
+
+		Unguided Random Testing: Inputs are generated relatively evenly throughout the input domain.
+		Inputs are generated following a heuristic that informs "smarter" input choices
+
+
+
+Why dynamically add tests? 
+
+
+
+	We never used assert() in the previous tests:
+
+		1. most of the time we were generating test cases completely randomly so could not know what the expected result would be 
+		2. Unittest only allows for a single failed assert per test, before it would stop.
+	
+	What we have done so far when testing:
+
+		1. import unittest
+		2. Declare a class of type unittest.TestCase
+		3. Within the above class, add tests by defining functions that begin with the word test
+		4. In main, execute unittest.main()
+
+
+	Building a Test Builder:
+
+
