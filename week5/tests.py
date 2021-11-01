@@ -23,7 +23,7 @@ class TestCase(unittest.TestCase):
             credit_card_validator(visa)
 
     def test_bug2(self):
-        tests_to_generate = 100000
+        tests_to_generate = 10000
         for i in range(0, tests_to_generate):
             master_card_pre = [34, 37]
             prefix = random.choice(master_card_pre)
@@ -49,8 +49,14 @@ class TestCase(unittest.TestCase):
     def test_bug5(self):
         tests_to_generate = 100000
         for i in range(0, tests_to_generate):
-            card = random.randint(0000000000000000, 9999999999999999)
+            card = random.randint(0000000000000000, 5555555555555555)
             credit_card_validator(card)
+
+    # def test_bug6(self):
+    #     tests_to_generate = 1000
+    #     for i in range(0, tests_to_generate):
+    #         card = random.randint(5555555555555555, 9999999999999999)
+    #         credit_card_validator(card)
 
     def make_card_num(self, length, prefix):
         '''

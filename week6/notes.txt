@@ -1,0 +1,52 @@
+Test-Driven Development
+
+
+
+	"The process of writing unit tests before you write the code to test." 
+
+	"TDD is primarily a way of approaching implementation."
+
+
+	Technical debt: a concept in programming that reflects the extra development work that arises when code that is easy ti implement in the short run is used instead of applying the best overall solution. 
+
+	
+
+
+	TDD Algorithm:
+
+		1. Write a test:
+
+			2. Run all currently written tests
+
+				- if the tests all pass, return to step 1
+				- if a test fails, proceed to step 3
+		3. Write the bare minimum of code to make the test pass:
+
+			4. Run all the currently written tests
+				- if tests all pass, return to step 1
+				- if the failing test is still failing, return to step 3
+		5. Occasionally evaluate if the code can be refactored to reduce duplication or eliminate no longer used parts of the code
+
+		6. Eventually stop development after adding "enough" tests without triggering a new failure. 
+
+
+
+
+Code when you begin TDD:
+
+
+import unittest
+from task import fizz_buzz
+
+class TestCase(unittest.TestCase):
+  pass
+
+if __name__ == '__main__':
+  unittest.main() 
+
+
+
+
+
+
+Remember the example we looked in Software Engineering II:
